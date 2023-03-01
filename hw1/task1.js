@@ -68,8 +68,6 @@ function countUniqueWords(str) {
 
     let count = map.get(word);
 
-    console.log(count);
-
     if (count) {
       map.set(word, count + 1)
     } else {
