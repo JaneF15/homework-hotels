@@ -14,7 +14,6 @@ import { ServeStaticModule } from "@nestjs/serve-static";
 import * as path from "path";
 import { Files } from "./files/files.model";
 import { FilesModule } from './files/files.module';
-import { MulterModule } from "@nestjs/platform-express";
 import { TextBlock } from "./text-block/text-block.model";
 
 @Module({
@@ -28,7 +27,7 @@ import { TextBlock } from "./text-block/text-block.model";
     }),
     //для раздачи статики
     ServeStaticModule.forRoot({
-      rootPath: path.resolve(process.env.UNLOADS_PATH),
+      rootPath: path.resolve(process.env.UPLOADS_PATH),
     }),
     SequelizeModule.forRoot({
       dialect: 'postgres',

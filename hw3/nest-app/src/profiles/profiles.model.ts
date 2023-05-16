@@ -1,6 +1,6 @@
 import { BelongsTo, Column, DataType, ForeignKey, Model, Table } from "sequelize-typescript";
-import { Gender } from "src/enums/gender";
-import { User } from "src/users/users.model";
+import { Gender } from "./../enums/gender";
+import { User } from "./../users/users.model";
 
 interface ProfileCreationAttr {
   firstName: string;

@@ -20,7 +20,7 @@ export class FilesService {
       
       //генерируем уникальное имя для файла
       const fileName = name || this.generateUniqueFileName(file);
-      const filePath = process.env.UNLOADS_PATH;
+      const filePath = process.env.UPLOADS_PATH;
       
       //если по пути filePath ничего нет, то создаем папки по этому пути
       if (!fs.existsSync(filePath)) {
@@ -59,7 +59,7 @@ export class FilesService {
     for (const file of files) {
       if (now - file.createdAt > 3600000) {
         await this.fileRepository.destroy({where: {id: file.id}});
-        const filePath = process.env.UNLOADS_PATH;
+        const filePath = process.env.UPLOADS_PATH;
     
         fs.rmSync(path.join(filePath, file.fileName));
       }

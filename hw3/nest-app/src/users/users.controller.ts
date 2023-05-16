@@ -1,7 +1,7 @@
 import { Body, Controller, Delete, Get, Param, Post, Put, UseGuards, UsePipes, ValidationPipe } from '@nestjs/common';
-import { OwnGuard } from 'src/auth/own-auth.guard';
-import { Roles } from 'src/auth/roles-auth.decorator';
-import { RolesGuard } from 'src/auth/roles-auth.guard';
+import { OwnGuard } from './../auth/own-auth.guard';
+import { Roles } from './../auth/roles-auth.decorator';
+import { RolesGuard } from './../auth/roles-auth.guard';
 import { AddRoleDto } from './dto/add-user-role.dto';
 import { CreateUserDto } from './dto/create-user.dto';
 import { UpdateUserDto } from './dto/update-user.dto';
